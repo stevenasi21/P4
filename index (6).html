@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo Predictor Bot</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#121212;
+            color:white;
+            text-align:center;
+            padding-top:50px;
+        }
+
+        .box{
+            width:300px;
+            margin:auto;
+            padding:20px;
+            background:#1e1e1e;
+            border-radius:10px;
+        }
+
+        button{
+            padding:10px 20px;
+            background:#00c853;
+            border:none;
+            color:white;
+            font-size:18px;
+            border-radius:5px;
+            cursor:pointer;
+        }
+
+        #result{
+            margin-top:20px;
+            font-size:24px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h1>Demo Predictor Bot</h1>
+    <p>Random prediction generator</p>
+
+    <button onclick="predict()">Generate Prediction</button>
+
+    <div id="result">Waiting...</div>
+</div>
+
+<script>
+function predict() {
+    const predictions = [
+        "🟢 HIGH CHANCE",
+        "🟡 MEDIUM CHANCE",
+        "🔴 LOW CHANCE",
+        "🟢 SAFE ENTRY",
+        "🔴 SKIP ROUND"
+    ];
+
+    let random =
+        predictions[Math.floor(Math.random() * predictions.length)];
+
+    document.getElementById("result").innerHTML = random;
+}
+</script>
+
+</body>
+</html>
